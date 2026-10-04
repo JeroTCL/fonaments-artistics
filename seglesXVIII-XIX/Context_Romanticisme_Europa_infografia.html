@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>El context del Romanticisme · Europa</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#111;color:#eee9df;font-family:Arial,sans-serif}
+.wrap{max-width:1450px;margin:auto;padding:42px 4vw 55px}
+header{border-bottom:1px solid #625b50;padding-bottom:24px;display:flex;justify-content:space-between}
+.k{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#d7c29b}
+h1,h2,.question{font-family:Georgia,serif;font-weight:400}
+h1{font-size:clamp(48px,6vw,82px);line-height:.92;margin:12px 0}
+.sub{color:#b9b0a2;font-size:18px;max-width:760px;line-height:1.45}.logo{width:100px;height:max-content}
+.intro{display:grid;grid-template-columns:1.2fr .8fr;gap:35px;margin:34px 0}
+.question{font-size:clamp(25px,3vw,40px);line-height:1.1}.answer{border-left:2px solid #d7c29b;padding-left:18px;color:#b9b0a2;line-height:1.55}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{border:1px solid #625b50;border-radius:14px;padding:27px;min-height:475px}
+.social{border-top:3px solid #c99b72}.tech{border-top:3px solid #8ca8a0}.politic{border-top:3px solid #9d8798}
+.num{font:52px Georgia;color:#aaa;opacity:.45}.card h2{font-size:31px;margin:5px 0 18px}.lead{font-size:16px;line-height:1.4;margin-bottom:17px}
+ul{list-style:none;padding:0;margin:0}li{border-top:1px solid #ffffff18;padding:11px 0;color:#b9b0a2;font-size:13.5px;line-height:1.42}li strong{color:#eee9df}
+.tag{display:inline-block;border:1px solid currentColor;border-radius:99px;padding:6px 10px;margin-top:15px;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+.timeline,.synthesis{margin-top:18px;border:1px solid #625b50;border-radius:14px;padding:25px 27px}.timeline h2{font-size:27px;margin:0 0 23px}
+.events{display:grid;grid-template-columns:repeat(7,1fr);position:relative}.events:before{content:"";position:absolute;top:6px;left:0;right:0;height:1px;background:#625b50}
+.event{position:relative;padding:25px 12px 0 0}.dot{position:absolute;top:1px;width:11px;height:11px;border:2px solid #d7c29b;border-radius:50%;background:#111}.year{font:17px Georgia;color:#d7c29b}.event p{font-size:11px;color:#aaa;line-height:1.35}
+.synthesis{background:#e9e2d5;color:#171513;display:grid;grid-template-columns:.75fr 1.25fr;gap:30px;align-items:center}.synthesis h2{font-size:36px;line-height:1;margin:0}.synthesis p{line-height:1.55;margin:0}.synthesis b{font-weight:700}
+footer{text-align:right;color:#777;font-size:10px;margin-top:14px}
+@media(max-width:900px){.cards,.intro,.synthesis{grid-template-columns:1fr}.events{grid-template-columns:repeat(2,1fr)}.events:before{display:none}}
+</style>
+<style>
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.image-card{height:475px;border-radius:14px;overflow:hidden;position:relative;cursor:pointer;border:1px solid #625b50;background:#222}
+.image-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s,filter .5s;display:block}
+.image-card:hover img{transform:scale(1.035);filter:brightness(.8)}
+.image-overlay{position:absolute;inset:0;padding:27px;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(transparent 35%,rgba(0,0,0,.86))}
+.image-overlay span{font:58px Georgia;color:#d7c29b;opacity:.75}
+.image-overlay h2{font:31px Georgia;font-weight:400;margin:4px 0 7px}
+.image-overlay small{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#b9b0a2}
+.popup{position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:50;display:none;align-items:center;justify-content:center;padding:4vh 4vw}
+.popup.open{display:flex}
+.popup-box{width:min(1200px,94vw);max-height:90vh;background:#181716;border:1px solid #625b50;border-radius:16px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;position:relative;box-shadow:0 25px 90px #000}
+.popup-box>button{position:absolute;right:14px;top:12px;width:40px;height:40px;border:1px solid #ffffff55;border-radius:50%;background:#111;color:#fff;font-size:27px;cursor:pointer;z-index:3}
+.popup-image{min-height:620px;background:#090909;display:flex;align-items:center;justify-content:center}
+.popup-image img{width:100%;height:100%;max-height:90vh;object-fit:cover}
+.popup-text{padding:42px 42px 35px;overflow:auto}
+.popup-text .pk{font-size:11px;letter-spacing:.16em;color:#d7c29b}
+.popup-text h2{font:42px Georgia;margin:12px 0 15px}
+.popup-text p{font-size:16px;line-height:1.5;color:#d0c8bb;margin-bottom:20px}
+.popup-text ul{list-style:none;padding:0;margin:0}
+.popup-text li{border-top:1px solid #ffffff18;padding:12px 0;color:#b9b0a2;line-height:1.45;font-size:14px}
+.popup-text li b{color:#eee9df}
+.popup-text .tag{display:inline-block;border:1px solid #d7c29b;border-radius:99px;padding:7px 11px;margin-top:16px;color:#d7c29b;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+@media(max-width:900px){.cards{grid-template-columns:1fr}.image-card{height:360px}.popup-box{grid-template-columns:1fr;max-height:92vh}.popup-image{min-height:230px;height:32vh}.popup-text{padding:25px}.popup-text h2{font-size:32px}}
+</style>
+<script>
+function openPop(id){document.getElementById('pop-'+id).classList.add('open');document.body.style.overflow='hidden'}
+function closePop(e){if(e){if(e.target.closest('.popup-box') && !e.target.closest('.popup-box>button')) return;e.stopPropagation()}document.querySelectorAll('.popup').forEach(x=>x.classList.remove('open'));document.body.style.overflow=''}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closePop()})
+</script>
+
+<style>
+.event{cursor:pointer;transition:transform .2s}.event:hover{transform:translateY(-3px)}
+.event:hover .year{color:#fff}.event:hover .dot{background:#d7c29b}
+.small-pop{display:block;width:min(900px,94vw);max-height:88vh;overflow:auto}
+.small-pop .timeline-img{display:block;width:100%;height:min(42vh,390px);object-fit:cover;margin:0;border-bottom:1px solid #625b50}
+.small-pop .popup-text{padding:34px 45px 40px}
+.small-pop a{display:inline-block;margin-top:16px;color:#d7c29b;text-decoration:none;border-bottom:1px solid #d7c29b;padding-bottom:3px;font-size:13px}
+.small-pop a:hover{color:#fff;border-color:#fff}
+</style>
+</head>
+<body><main class="wrap">
+<header><div><div class="k">Fonaments Artístics · Europa · finals s. XVIII — primera meitat s. XIX</div>
+<h1>El context del<br>Romanticisme</h1><div class="sub">Una nova sensibilitat artística neix en una Europa sacsejada per canvis socials, tecnològics i polítics.</div></div>
+<img class="logo" src="logo.png" alt="Escola d'Art Ondara"></header>
+
+<section class="intro"><div class="question">Per què apareix una art que posa al centre <em>l'emoció, la llibertat i l'individu?</em></div>
+<div class="answer">El Romanticisme no s'explica només com un estil. És també una <b>resposta cultural</b> a un món que està canviant ràpidament.</div></section>
+
+<section class="cards">
+<article class="image-card social" onclick="openPop('social')">
+  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Quarry%20Bank%20Mill%20-%20geograph.org.uk%20-%20394221.jpg" alt="Quarry Bank Mill">
+  <div class="image-overlay"><span>01</span><h2>Transformació social</h2></div>
+</article>
+<article class="image-card tech" onclick="openPop('tech')">
+  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Newcomen%20steam%20engine.jpg" alt="Màquina de vapor de Newcomen">
+  <div class="image-overlay"><span>02</span><h2>Revolució tecnològica</h2></div>
+</article>
+<article class="image-card politic" onclick="openPop('politic')">
+  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Prise%20de%20la%20Bastille.jpg" alt="Assalt de la Bastilla">
+  <div class="image-overlay"><span>03</span><h2>Revolució política</h2></div>
+</article>
+</section>
+
+<div class="popup" id="pop-social" onclick="closePop(event)">
+ <div class="popup-box social"><button onclick="closePop(event)">×</button>
+  <div class="popup-image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Quarry%20Bank%20Mill%20-%20geograph.org.uk%20-%20394221.jpg" alt=""></div>
+  <div class="popup-text"><div class="pk">01 · TRANSFORMACIÓ SOCIAL</div><h2>Una nova societat</h2>
+   <p>La industrialització transforma la manera de treballar, viure i relacionar-se.</p>
+   <ul><li><b>Revolució industrial.</b> Creixen les ciutats i apareixen noves formes de treball.</li><li><b>Burgesia.</b> Guanya poder econòmic i cultural i es converteix en un nou públic per a l'art.</li><li><b>Urbanització.</b> La ciutat moderna es converteix en espai de masses, conflictes i oportunitats.</li><li><b>Individu i sentiments.</b> La subjectivitat, els somnis i la imaginació adquireixen més importància.</li><li><b>Identitats culturals.</b> Es recuperen tradicions, llegendes, llengües i cultures populars.</li></ul>
+   <div class="tag">Individu · societat · identitat</div></div>
+ </div>
+</div>
+
+<div class="popup" id="pop-tech" onclick="closePop(event)">
+ <div class="popup-box tech"><button onclick="closePop(event)">×</button>
+  <div class="popup-image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Newcomen%20steam%20engine.jpg" alt=""></div>
+  <div class="popup-text"><div class="pk">02 · REVOLUCIÓ TECNOLÒGICA</div><h2>La màquina canvia el món</h2>
+   <p>El vapor, la mecanització i els nous transports modifiquen la percepció del temps, l'espai i el progrés.</p>
+   <ul><li><b>Vapor.</b> La màquina de vapor accelera la indústria i el transport.</li><li><b>Ferrocarril.</b> Connecta territoris i fa més petites les distàncies.</li><li><b>Fàbrica.</b> La producció mecanitzada transforma el treball i el paisatge.</li><li><b>Nous mitjans.</b> Premsa i litografia acceleren la circulació d'idees i imatges.</li><li><b>Progrés i inquietud.</b> La tecnologia fascina, però també genera incertesa davant d'un món nou.</li></ul>
+   <div class="tag">Màquina · velocitat · progrés</div></div>
+ </div>
+</div>
+
+<div class="popup" id="pop-politic" onclick="closePop(event)">
+ <div class="popup-box politic"><button onclick="closePop(event)">×</button>
+  <div class="popup-image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Prise%20de%20la%20Bastille.jpg" alt=""></div>
+  <div class="popup-text"><div class="pk">03 · REVOLUCIÓ POLÍTICA</div><h2>La llibertat entra en conflicte amb l'ordre</h2>
+   <p>Les idees de ciutadania, llibertat i sobirania qüestionen l'ordre polític de l'Antic Règim.</p>
+   <ul><li><b>Revolució Francesa · 1789.</b> Igualtat jurídica, ciutadania i sobirania popular.</li><li><b>Napoleó.</b> Les guerres transformen el mapa europeu i difonen nous principis polítics.</li><li><b>Restauració · 1815.</b> Les monarquies intenten recuperar l'ordre anterior.</li><li><b>Liberalisme.</b> Creixen les demandes de constitucions, drets i llibertats.</li><li><b>Nacionalismes.</b> Els pobles reivindiquen identitat, història i autonomia política.</li></ul>
+   <div class="tag">Llibertat · revolució · nació</div></div>
+ </div>
+</div>
+
+<section class="timeline"><h2>Una Europa en transformació</h2><div class="events">
+<div class="event" onclick="openPop('t1760')"><span class="dot"></span><div class="year">1760s</div><p>Inici de la Revolució Industrial</p></div>
+<div class="event" onclick="openPop('t1776')"><span class="dot"></span><div class="year">1776</div><p>Independència dels Estats Units</p></div>
+<div class="event" onclick="openPop('t1789')"><span class="dot"></span><div class="year">1789</div><p>Revolució Francesa</p></div>
+<div class="event" onclick="openPop('t1804')"><span class="dot"></span><div class="year">1804</div><p>Napoleó, emperador</p></div>
+<div class="event" onclick="openPop('t1815')"><span class="dot"></span><div class="year">1815</div><p>Waterloo i Restauració</p></div>
+<div class="event" onclick="openPop('t1820')"><span class="dot"></span><div class="year">1820–30s</div><p>Revolucions liberals</p></div>
+<div class="event" onclick="openPop('t1827')"><span class="dot"></span><div class="year">1827</div><p>Pròleg de <i>Cromwell</i>, de Victor Hugo</p></div>
+<div class="event" onclick="openPop('t1848')"><span class="dot"></span><div class="year">1848</div><p>Onada revolucionària europea</p></div>
+</div></section>
+
+<div class="popup timeline-popup" id="pop-t1760" onclick="closePop(event)"><div class="popup-box small-pop"><img class="timeline-img" src="https://upload.wikimedia.org/wikipedia/commons/1/16/Quarry_Bank_Mill_%285890437660%29.jpg" alt="Quarry Bank Mill, exemple de fàbrica tèxtil de la Revolució Industrial"><button onclick="closePop(event)">×</button><div class="popup-text"><div class="pk">1760s · REVOLUCIÓ INDUSTRIAL</div><h2>Comença una nova era</h2><p>La industrialització s'inicia a Gran Bretanya i transforma progressivament l'economia, el treball, les ciutats i el paisatge europeu.</p><p><b>Per al Romanticisme:</b> apareix una nova realitat industrial que conviu amb la fascinació per la natura i amb la crítica a la societat moderna.</p><a href="https://ca.wikipedia.org/wiki/Revoluci%C3%B3_Industrial" target="_blank">Viquipèdia →</a></div></div></div>
+
+<div class="popup timeline-popup" id="pop-t1776" onclick="closePop(event)"><div class="popup-box small-pop"><img class="timeline-img" src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Declaration.independence.1776.jpg" alt="Representació de la signatura de la Declaració d'Independència dels Estats Units"><button onclick="closePop(event)">×</button><div class="popup-text"><div class="pk">1776 · INDEPENDÈNCIA DELS ESTATS UNITS</div><h2>Una nova idea de llibertat</h2><p>La Declaració d'Independència proclama principis de llibertat i drets que tindran una gran influència política a Europa.</p><p><b>Per al Romanticisme:</b> reforça l'imaginari de llibertat individual i de ruptura amb l'ordre establert.</p><a href="https://ca.wikipedia.org/wiki/Declaraci%C3%B3_d%27Independ%C3%A8ncia_dels_Estats_Units" target="_blank">Viquipèdia →</a></div></div></div>
+
+<div class="popup timeline-popup" id="pop-t1789" onclick="closePop(event)"><div class="popup-box small-pop"><img class="timeline-img" src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Storming_the_bastille.jpg" alt="Presa de la Bastilla, 14 de juliol de 1789"><button onclick="closePop(event)">×</button><div class="popup-text"><div class="pk">1789 · REVOLUCIÓ FRANCESA</div><h2>L'ordre tradicional és qüestionat</h2><p>La Revolució Francesa posa en qüestió l'Antic Règim i difon conceptes com ciutadania, llibertat, igualtat i sobirania popular.</p><p><b>Per al Romanticisme:</b> la llibertat es converteix en una de les grans idees del nou imaginari europeu.</p><a href="https://ca.wikipedia.org/wiki/Revoluci%C3%B3_Francesa" target="_blank">Viquipèdia →</a></div></div></div>
+
+<div class="popup timeline-popup" id="pop-t1804" onclick="closePop(event)"><div class="popup-box small-pop"><img class="timeline-img" src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Le_Sacre_de_Napol%C3%A9on%2C_David%2C_1804.jpg" alt="La coronació de Napoleó, obra de Jacques-Louis David"><button onclick="closePop(event)">×</button><div class="popup-text"><div class="pk">1804 · NAPOLEÓ</div><h2>Revolució i poder</h2><p>Napoleó es proclama emperador i les guerres napoleòniques transformen el mapa polític europeu.</p><p><b>Per al Romanticisme:</b> la guerra, el heroisme, el conflicte i la figura de l'individu davant la història esdevenen temes artístics de gran força.</p><a href="https://ca.wikipedia.org/wiki/Napole%C3%B3_Bonaparte" target="_blank">Viquipèdia →</a></div></div></div>
+
+<div class="popup timeline-popup" id="pop-t1815" onclick="closePop(event)"><div class="popup-box small-pop"><img class="timeline-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/CongressVienna.jpg/960px-CongressVienna.jpg" alt="Representació del Congrés de Viena"><button onclick="closePop(event)">×</button><div class="popup-text"><div class="pk">1815 · WATERLOO I RESTAURACIÓ</div><h2>Després de Napoleó</h2><p>La derrota de Napoleó dona pas a la Restauració, que intenta recuperar l'equilibri monàrquic europeu.</p><p><b>Per al Romanticisme:</b> la tensió entre llibertat i ordre alimenta els moviments liberals i les actituds de rebel·lia.</p><a href="https://ca.wikipedia.org/wiki/Congr%C3%A9s_de_Viena" target="_blank">Viquipèdia →</a></div></div></div>
+
+<div class="popup timeline-popup" id="pop-t1820" onclick="closePop(event)"><div class="popup-box small-pop"><img class="timeline-img" src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Eug%C3%A8ne_Delacroix_-_Le_28_Juillet._La_Libert%C3%A9_guidant_le_peuple.jpg" alt="La llibertat guiant el poble, d'Eugène Delacroix, 1830"><button onclick="closePop(event)">×</button><div class="popup-text"><div class="pk">1820–30s · REVOLUCIONS LIBERALS</div><h2>Llibertat i nació</h2><p>Europa viu diverses revolucions liberals i moviments nacionalistes que qüestionen l'ordre imposat després de 1815.</p><p><b>Per al Romanticisme:</b> la reivindicació de la llibertat i de la identitat nacional es converteix en una font artística i literària.</p><a href="https://ca.wikipedia.org/wiki/Revolucions_de_1820" target="_blank">Viquipèdia →</a></div></div></div>
+
+<div class="popup timeline-popup" id="pop-t1827" onclick="closePop(event)"><div class="popup-box small-pop"><img class="timeline-img" src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Portrait_de_Victor_Hugo_sur_fond_de_Notre-Dame_de_Reims_-_Jean_Alaux.jpg" alt="Victor Hugo, retrat de 1822, de Jean Alaux"><button onclick="closePop(event)">×</button><div class="popup-text"><div class="pk">1827 · VICTOR HUGO</div><h2>El Romanticisme pren consciència d'ell mateix</h2><p>Victor Hugo publica el <i>Pròleg de Cromwell</i>, un text teòric que defensa una nova concepció del drama i qüestiona les rígides normes del teatre clàssic.</p><p><b>Per al Romanticisme:</b> es converteix en un dels textos fundacionals de la nova sensibilitat romàntica i reivindica la barreja de gèneres i la llibertat creadora.</p><a href="https://ca.wikipedia.org/wiki/Cromwell_(Victor_Hugo)" target="_blank">Viquipèdia →</a></div></div></div>
+
+<div class="popup timeline-popup" id="pop-t1848" onclick="closePop(event)"><div class="popup-box small-pop"><img class="timeline-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Paris-Feb-1848.jpg/960px-Paris-Feb-1848.jpg" alt="Escena de la Revolució Francesa de 1848"><button onclick="closePop(event)">×</button><div class="popup-text"><div class="pk">1848 · REVOLUCIONS EUROPEES</div><h2>La primavera dels pobles</h2><p>Una onada revolucionària recorre Europa reclamant reformes liberals, drets polítics i, en molts casos, reivindicacions nacionals.</p><p><b>Per al Romanticisme:</b> culmina el context polític que ha alimentat bona part de l'imaginari romàntic sobre llibertat, poble i nació.</p><a href="https://ca.wikipedia.org/wiki/Revolucions_de_1848" target="_blank">Viquipèdia →</a></div></div></div>
+
+
+<section class="synthesis"><h2>El Romanticisme<br>com a resposta</h2>
+<p><b>RAÓ → EMOCIÓ</b> · <b>ORDRE → LLIBERTAT</b> · <b>UNIVERSAL → NACIONAL</b> · <b>IDEAL → REALITAT</b><br><br>
+Davant d'un món que canvia ràpidament, els artistes romàntics reivindiquen <b>l'experiència individual, la imaginació, la natura, el sentiment, la llibertat i allò desconegut</b>.</p></section>
+<footer>Escola d'Art Ondara · Material docent · Romanticisme</footer>
+</main></body></html>
