@@ -1,0 +1,224 @@
+<!doctype html><html lang="ca"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Romanticisme · Obres</title><style>
+*{box-sizing:border-box}body{margin:0;background:#111;color:#eee9df;font-family:Arial,sans-serif;overflow:hidden}
+.deck{height:100vh;position:relative}.slide{position:absolute;inset:0;display:none;background:#111}.slide.active{display:block}
+.art{width:100%;height:100%;object-fit:contain;background:#090909}.caption{position:absolute;left:0;right:0;bottom:0;padding:55px 5vw 28px;background:linear-gradient(transparent,rgba(0,0,0,.9));pointer-events:none}
+.caption .date{font:14px Georgia;color:#d7c29b}.caption h1{font:clamp(25px,3vw,46px);font-family:Georgia;font-weight:400;margin:5px 0}.caption .author{font-size:14px;color:#bbb}
+.nav{position:absolute;inset:0;display:flex;justify-content:space-between;align-items:center;pointer-events:none}.nav button{pointer-events:auto;border:0;background:#0008;color:#fff;width:48px;height:70px;font-size:35px;cursor:pointer;opacity:.25}.nav button:hover{opacity:.9}
+.logo{position:absolute;top:18px;left:25px;width:58px;height:auto;z-index:6;filter:drop-shadow(0 2px 4px #000)}.top{position:absolute;top:18px;left:95px;right:25px;display:flex;justify-content:space-between;z-index:5}.counter{font:12px Arial;color:#ddd;background:#0008;padding:8px 12px;border-radius:20px}
+.actions{display:flex;gap:8px}.actions button{background:#111c;border:1px solid #ffffff55;color:#eee;padding:9px 13px;border-radius:20px;cursor:pointer;font-size:11px;letter-spacing:.06em}.actions button:hover{background:#333}
+.modal{position:fixed;inset:0;background:#000d;z-index:20;display:none;align-items:center;justify-content:center;padding:4vh 4vw}.modal.open{display:flex}
+.box{width:min(1120px,94vw);max-height:90vh;overflow:auto;background:#181716;border:1px solid #625b50;border-radius:16px;position:relative;padding:42px 48px}.close{position:absolute;right:15px;top:12px;border:1px solid #ffffff55;background:#111;color:#fff;border-radius:50%;width:38px;height:38px;font-size:25px;cursor:pointer}
+.k{font-size:10px;letter-spacing:.16em;color:#d7c29b}.box h2{font:42px Georgia;font-weight:400;margin:10px 0 24px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:0 45px}.item{border-top:1px solid #ffffff18;padding:13px 0;color:#c8c0b5;line-height:1.45;font-size:14px}.item b{color:#eee9df}.long{line-height:1.6;color:#d0c8bb;font-size:16px}.analysis{margin-top:22px;border-left:2px solid #d7c29b;padding-left:18px}
+
+@media(max-width:800px){.grid{grid-template-columns:1fr}.box{padding:35px 25px}.box h2{font-size:32px}}
+</style></head><body>
+<div class="deck"><img class="logo" src="logo.png" alt="Escola d’Art Ondara"><section class="slide active">
+<img class="art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Monk%20by%20the%20Sea.jpg" alt="Monjo davant del mar">
+<div class="top"><div class="counter" id="counter">1 / 10</div><div class="actions">
+<button onclick="openM('tech0')">✱ FITXA TÈCNICA</button>
+<button onclick="openM('analysis0')">✱ ANÀLISI FORMAL</button>
+</div></div>
+<div class="caption"><div class="date">1809</div><h1>Monjo davant del mar</h1><div class="author">Caspar David Friedrich</div></div>
+<div class="nav"><button onclick="prev()">‹</button><button onclick="next()">›</button></div>
+</section><section class="slide ">
+<img class="art" src="https://commons.wikimedia.org/wiki/Special:FilePath/G%C3%A9ricault%20-%20Officier%20de%20chasseur%20%C3%A0%20cheval%20de%20la%20garde%20imp%C3%A9riale%20chargeant%2C%201812.jpg" alt="Oficial de caçadors de la Guàrdia Imperial carregant">
+<div class="top"><div class="counter" id="counter">2 / 10</div><div class="actions">
+<button onclick="openM('tech1')">✱ FITXA TÈCNICA</button>
+<button onclick="openM('analysis1')">✱ ANÀLISI FORMAL</button>
+</div></div>
+<div class="caption"><div class="date">1812</div><h1>Oficial de caçadors de la Guàrdia Imperial carregant</h1><div class="author">Théodore Géricault</div></div>
+<div class="nav"><button onclick="prev()">‹</button><button onclick="next()">›</button></div>
+</section><section class="slide ">
+<img class="art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Caspar%20David%20Friedrich%20-%20Wanderer%20above%20the%20Sea%20of%20Fog.jpeg" alt="El caminant davant del mar de boira">
+<div class="top"><div class="counter" id="counter">3 / 10</div><div class="actions">
+<button onclick="openM('tech2')">✱ FITXA TÈCNICA</button>
+<button onclick="openM('analysis2')">✱ ANÀLISI FORMAL</button>
+</div></div>
+<div class="caption"><div class="date">1818</div><h1>El caminant davant del mar de boira</h1><div class="author">Caspar David Friedrich</div></div>
+<div class="nav"><button onclick="prev()">‹</button><button onclick="next()">›</button></div>
+</section><section class="slide ">
+<img class="art" src="https://commons.wikimedia.org/wiki/Special:FilePath/The%20Raft%20of%20the%20Medusa.jpg" alt="El rai de la Medusa">
+<div class="top"><div class="counter" id="counter">4 / 10</div><div class="actions">
+<button onclick="openM('tech3')">✱ FITXA TÈCNICA</button>
+<button onclick="openM('analysis3')">✱ ANÀLISI FORMAL</button>
+</div></div>
+<div class="caption"><div class="date">1818–1819</div><h1>El rai de la Medusa</h1><div class="author">Théodore Géricault</div></div>
+<div class="nav"><button onclick="prev()">‹</button><button onclick="next()">›</button></div>
+</section><section class="slide ">
+<img class="art" src="https://commons.wikimedia.org/wiki/Special:FilePath/John-constable-the-hay-wain.jpg" alt="La carreta de fenc">
+<div class="top"><div class="counter" id="counter">5 / 10</div><div class="actions">
+<button onclick="openM('tech4')">✱ FITXA TÈCNICA</button>
+<button onclick="openM('analysis4')">✱ ANÀLISI FORMAL</button>
+</div></div>
+<div class="caption"><div class="date">1821</div><h1>La carreta de fenc</h1><div class="author">John Constable</div></div>
+<div class="nav"><button onclick="prev()">‹</button><button onclick="next()">›</button></div>
+</section><section class="slide ">
+<img class="art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Caspar%20David%20Friedrich%20-%20The%20Sea%20of%20Ice%20-%20WGA8270.jpg" alt="El mar de gel">
+<div class="top"><div class="counter" id="counter">6 / 10</div><div class="actions">
+<button onclick="openM('tech5')">✱ FITXA TÈCNICA</button>
+<button onclick="openM('analysis5')">✱ ANÀLISI FORMAL</button>
+</div></div>
+<div class="caption"><div class="date">1823–1824</div><h1>El mar de gel</h1><div class="author">Caspar David Friedrich</div></div>
+<div class="nav"><button onclick="prev()">‹</button><button onclick="next()">›</button></div>
+</section><section class="slide ">
+<img class="art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Eug%C3%A8ne%20Delacroix%20-%20Le%2028%20Juillet.%20La%20Libert%C3%A9%20guidant%20le%20peuple.jpg" alt="La llibertat guiant el poble">
+<div class="top"><div class="counter" id="counter">7 / 10</div><div class="actions">
+<button onclick="openM('tech6')">✱ FITXA TÈCNICA</button>
+<button onclick="openM('analysis6')">✱ ANÀLISI FORMAL</button>
+</div></div>
+<div class="caption"><div class="date">1830</div><h1>La llibertat guiant el poble</h1><div class="author">Eugène Delacroix</div></div>
+<div class="nav"><button onclick="prev()">‹</button><button onclick="next()">›</button></div>
+</section><section class="slide ">
+<img class="art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Fighting%20T%C3%A9m%C3%A9raire.jpg" alt="El Temerari remolcat a dic sec">
+<div class="top"><div class="counter" id="counter">8 / 10</div><div class="actions">
+<button onclick="openM('tech7')">✱ FITXA TÈCNICA</button>
+<button onclick="openM('analysis7')">✱ ANÀLISI FORMAL</button>
+</div></div>
+<div class="caption"><div class="date">1839</div><h1>El Temerari remolcat a dic sec</h1><div class="author">J. M. W. Turner</div></div>
+<div class="nav"><button onclick="prev()">‹</button><button onclick="next()">›</button></div>
+</section><section class="slide ">
+<img class="art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Rain%20Steam%20and%20Speed%20the%20Great%20Western%20Railway.jpg" alt="Pluja, vapor i velocitat">
+<div class="top"><div class="counter" id="counter">9 / 10</div><div class="actions">
+<button onclick="openM('tech8')">✱ FITXA TÈCNICA</button>
+<button onclick="openM('analysis8')">✱ ANÀLISI FORMAL</button>
+</div></div>
+<div class="caption"><div class="date">1844</div><h1>Pluja, vapor i velocitat</h1><div class="author">J. M. W. Turner</div></div>
+<div class="nav"><button onclick="prev()">‹</button><button onclick="next()">›</button></div>
+</section><section class="slide ">
+<img class="art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Ophelia%20by%20Millais.jpg" alt="Ofèlia">
+<div class="top"><div class="counter" id="counter">10 / 10</div><div class="actions">
+<button onclick="openM('tech9')">✱ FITXA TÈCNICA</button>
+<button onclick="openM('analysis9')">✱ ANÀLISI FORMAL</button>
+</div></div>
+<div class="caption"><div class="date">1851–1852</div><h1>Ofèlia</h1><div class="author">John Everett Millais</div></div>
+<div class="nav"><button onclick="prev()">‹</button><button onclick="next()">›</button></div>
+</section></div><div class="modal" id="tech0" onclick="if(event.target===this)closeM(event)">
+<div class="box"><button class="close" onclick="closeM(event)">×</button><div class="k">FITXA TÈCNICA · 1809</div><h2>Monjo davant del mar</h2>
+<div class="grid">
+<div class="item"><b>Autor</b><br>Caspar David Friedrich</div><div class="item"><b>Data</b><br>1809</div>
+<div class="item"><b>Tècnica</b><br>Oli sobre tela</div><div class="item"><b>Dimensions</b><br>110 × 172 cm</div>
+<div class="item"><b>Gènere</b><br>Paisatge romàntic</div><div class="item"><b>Localització</b><br>Alte Nationalgalerie, Berlín</div>
+</div><div class="analysis"><p class="long">Una figura humana mínima davant de la immensitat del mar, el cel i la boira. L’obra concentra una de les idees centrals del Romanticisme: la relació entre l’individu i allò immens, desconegut i sublim.</p></div></div></div>
+<div class="modal" id="analysis0" onclick="if(event.target===this)closeM(event)">
+<div class="box"><button class="close" onclick="closeM(event)">×</button><div class="k">ANÀLISI FORMAL I COMPOSITIVA</div><h2>Monjo davant del mar</h2>
+<p class="long">La composició trenca amb la perspectiva tradicional i s’organitza en tres grans franges horitzontals: terra, mar i cel. El monjo, molt petit i gairebé centrat, actua com a escala humana davant d’un espai immens. L’horitzó baix i l’enorme massa celeste generen una sensació d’aïllament, silenci i transcendència.</p><div class="analysis"><p class="long"><b>Estratègies compositives:</b><br>Eix vertical del personatge · tres franges horitzontals · horitzó · proporció figura/espai</p></div>
+
+</div></div><div class="modal" id="tech1" onclick="if(event.target===this)closeM(event)">
+<div class="box"><button class="close" onclick="closeM(event)">×</button><div class="k">FITXA TÈCNICA · 1812</div><h2>Oficial de caçadors de la Guàrdia Imperial carregant</h2>
+<div class="grid">
+<div class="item"><b>Autor</b><br>Théodore Géricault</div><div class="item"><b>Data</b><br>1812</div>
+<div class="item"><b>Tècnica</b><br>Oli sobre tela</div><div class="item"><b>Dimensions</b><br>349 × 266 cm</div>
+<div class="item"><b>Gènere</b><br>Pintura d’història / retrat eqüestre</div><div class="item"><b>Localització</b><br>Musée du Louvre, París</div>
+</div><div class="analysis"><p class="long">Géricault converteix un oficial contemporani en una figura heroica i dinàmica. La pintura mostra l’interès romàntic per l’acció, el moviment, l’energia i la intensitat emocional.</p></div></div></div>
+<div class="modal" id="analysis1" onclick="if(event.target===this)closeM(event)">
+<div class="box"><button class="close" onclick="closeM(event)">×</button><div class="k">ANÀLISI FORMAL I COMPOSITIVA</div><h2>Oficial de caçadors de la Guàrdia Imperial carregant</h2>
+<p class="long">La figura i el cavall formen una massa diagonal que travessa el camp visual. El cos de l’oficial, el sabre i l’animal creen un moviment ascendent i giratori. El fons és poc definit i concentra l’atenció en la silueta, la musculatura, el gest i la tensió del moment.</p><div class="analysis"><p class="long"><b>Estratègies compositives:</b><br>Diagonal ascendent · eix del cavall · arc del sabre · tensions creuades</p></div>
+
+</div></div><div class="modal" id="tech2" onclick="if(event.target===this)closeM(event)">
+<div class="box"><button class="close" onclick="closeM(event)">×</button><div class="k">FITXA TÈCNICA · 1818</div><h2>El caminant davant del mar de boira</h2>
+<div class="grid">
+<div class="item"><b>Autor</b><br>Caspar David Friedrich</div><div class="item"><b>Data</b><br>1818</div>
+<div class="item"><b>Tècnica</b><br>Oli sobre tela</div><div class="item"><b>Dimensions</b><br>94,8 × 74,8 cm</div>
+<div class="item"><b>Gènere</b><br>Paisatge</div><div class="item"><b>Localització</b><br>Hamburger Kunsthalle, Hamburg</div>
+</div><div class="analysis"><p class="long">El caminant contempla un paisatge que no domina completament. La figura es converteix en mediadora entre l’espectador i una natura grandiosa i incerta.</p></div></div></div>
+<div class="modal" id="analysis2" onclick="if(event.target===this)closeM(event)">
+<div class="box"><button class="close" onclick="closeM(event)">×</button><div class="k">ANÀLISI FORMAL I COMPOSITIVA</div><h2>El caminant davant del mar de boira</h2>
+<p class="long">La figura central és un eix vertical molt potent. El relleu crea una estructura triangular i una successió de diagonals que condueixen cap a la boira. L’esquena del personatge ens situa en una mirada compartida: veiem el paisatge des de la seva posició.</p><div class="analysis"><p class="long"><b>Estratègies compositives:</b><br>Eix vertical · estructura triangular · diagonals del relleu · centre visual</p></div>
+
+</div></div><div class="modal" id="tech3" onclick="if(event.target===this)closeM(event)">
+<div class="box"><button class="close" onclick="closeM(event)">×</button><div class="k">FITXA TÈCNICA · 1818–1819</div><h2>El rai de la Medusa</h2>
+<div class="grid">
+<div class="item"><b>Autor</b><br>Théodore Géricault</div><div class="item"><b>Data</b><br>1818–1819</div>
+<div class="item"><b>Tècnica</b><br>Oli sobre tela</div><div class="item"><b>Dimensions</b><br>491 × 716 cm</div>
+<div class="item"><b>Gènere</b><br>Pintura d’història</div><div class="item"><b>Localització</b><br>Musée du Louvre, París</div>
+</div><div class="analysis"><p class="long">Inspirada en el naufragi de la fragata Méduse, l’obra transforma un fet contemporani en una escena monumental de desesperació i esperança.</p></div></div></div>
+<div class="modal" id="analysis3" onclick="if(event.target===this)closeM(event)">
+<div class="box"><button class="close" onclick="closeM(event)">×</button><div class="k">ANÀLISI FORMAL I COMPOSITIVA</div><h2>El rai de la Medusa</h2>
+<p class="long">La composició es construeix mitjançant una gran piràmide humana ascendent. La base acumula cossos i desesperació; la part superior culmina amb la figura que agita un drap cap al vaixell de salvament. Les diagonals dirigeixen la mirada des dels morts fins a l’esperança llunyana.</p><div class="analysis"><p class="long"><b>Estratègies compositives:</b><br>Gran piràmide · diagonal ascendent · segona piràmide · línia de l’horitzó i vaixell</p></div>
+
+</div></div><div class="modal" id="tech4" onclick="if(event.target===this)closeM(event)">
+<div class="box"><button class="close" onclick="closeM(event)">×</button><div class="k">FITXA TÈCNICA · 1821</div><h2>La carreta de fenc</h2>
+<div class="grid">
+<div class="item"><b>Autor</b><br>John Constable</div><div class="item"><b>Data</b><br>1821</div>
+<div class="item"><b>Tècnica</b><br>Oli sobre tela</div><div class="item"><b>Dimensions</b><br>130,2 × 185,4 cm</div>
+<div class="item"><b>Gènere</b><br>Paisatge</div><div class="item"><b>Localització</b><br>National Gallery, Londres</div>
+</div><div class="analysis"><p class="long">Constable reivindica el paisatge quotidià anglès. La natura no és només decoració: és l’autèntic tema de la pintura i es presenta com una experiència sensible.</p></div></div></div>
+<div class="modal" id="analysis4" onclick="if(event.target===this)closeM(event)">
+<div class="box"><button class="close" onclick="closeM(event)">×</button><div class="k">ANÀLISI FORMAL I COMPOSITIVA</div><h2>La carreta de fenc</h2>
+<p class="long">La composició s’organitza amb un horitzó baix i una gran volta formada pels arbres. El riu introdueix una diagonal suau que condueix cap al fons. Les masses vegetals emmarquen l’escena i creen profunditat sense una construcció geomètrica rígida.</p><div class="analysis"><p class="long"><b>Estratègies compositives:</b><br>Horitzó baix · diagonals del riu · arc vegetal · masses laterals</p></div>
+
+</div></div><div class="modal" id="tech5" onclick="if(event.target===this)closeM(event)">
+<div class="box"><button class="close" onclick="closeM(event)">×</button><div class="k">FITXA TÈCNICA · 1823–1824</div><h2>El mar de gel</h2>
+<div class="grid">
+<div class="item"><b>Autor</b><br>Caspar David Friedrich</div><div class="item"><b>Data</b><br>1823–1824</div>
+<div class="item"><b>Tècnica</b><br>Oli sobre tela</div><div class="item"><b>Dimensions</b><br>96,7 × 126,9 cm</div>
+<div class="item"><b>Gènere</b><br>Paisatge</div><div class="item"><b>Localització</b><br>Hamburger Kunsthalle, Hamburg</div>
+</div><div class="analysis"><p class="long">El naufragi queda gairebé ocult entre enormes plaques de gel. Friedrich converteix la natura en una força monumental davant la qual l’ésser humà sembla insignificant.</p></div></div></div>
+<div class="modal" id="analysis5" onclick="if(event.target===this)closeM(event)">
+<div class="box"><button class="close" onclick="closeM(event)">×</button><div class="k">ANÀLISI FORMAL I COMPOSITIVA</div><h2>El mar de gel</h2>
+<p class="long">Les plaques de gel formen diagonals i triangles superposats. La composició és inestable i angular: no hi ha un horitzó tranquil que estabilitzi l’espai. Les formes trencades creen tensió visual i condueixen la mirada cap al centre, on apareixen les restes del vaixell.</p><div class="analysis"><p class="long"><b>Estratègies compositives:</b><br>Diagonals trencades · triangles · centre de tensió · estructura ascendent</p></div>
+
+</div></div><div class="modal" id="tech6" onclick="if(event.target===this)closeM(event)">
+<div class="box"><button class="close" onclick="closeM(event)">×</button><div class="k">FITXA TÈCNICA · 1830</div><h2>La llibertat guiant el poble</h2>
+<div class="grid">
+<div class="item"><b>Autor</b><br>Eugène Delacroix</div><div class="item"><b>Data</b><br>1830</div>
+<div class="item"><b>Tècnica</b><br>Oli sobre tela</div><div class="item"><b>Dimensions</b><br>260 × 325 cm</div>
+<div class="item"><b>Gènere</b><br>Pintura d’història</div><div class="item"><b>Localització</b><br>Musée du Louvre, París</div>
+</div><div class="analysis"><p class="long">Delacroix representa les jornades revolucionàries de juliol de 1830. La llibertat apareix personificada com una figura que avança per damunt de la barricada.</p></div></div></div>
+<div class="modal" id="analysis6" onclick="if(event.target===this)closeM(event)">
+<div class="box"><button class="close" onclick="closeM(event)">×</button><div class="k">ANÀLISI FORMAL I COMPOSITIVA</div><h2>La llibertat guiant el poble</h2>
+<p class="long">La composició és una gran piràmide dinàmica. La bandera crea un eix vertical i la figura de la Llibertat ocupa el vèrtex. Els cossos de la base formen una diagonal ascendent que condueix cap a ella. El contrast de llum i foscor reforça els focus principals.</p><div class="analysis"><p class="long"><b>Estratègies compositives:</b><br>Piràmide compositiva · diagonal ascendent · vertical de la bandera · focus central</p></div>
+
+</div></div><div class="modal" id="tech7" onclick="if(event.target===this)closeM(event)">
+<div class="box"><button class="close" onclick="closeM(event)">×</button><div class="k">FITXA TÈCNICA · 1839</div><h2>El Temerari remolcat a dic sec</h2>
+<div class="grid">
+<div class="item"><b>Autor</b><br>J. M. W. Turner</div><div class="item"><b>Data</b><br>1839</div>
+<div class="item"><b>Tècnica</b><br>Oli sobre tela</div><div class="item"><b>Dimensions</b><br>90,7 × 121,6 cm</div>
+<div class="item"><b>Gènere</b><br>Paisatge / marina</div><div class="item"><b>Localització</b><br>National Gallery, Londres</div>
+</div><div class="analysis"><p class="long">El vell vaixell de guerra és remolcat cap al seu desballestament. Turner converteix un episodi concret en una meditació sobre el temps, la desaparició i el canvi.</p></div></div></div>
+<div class="modal" id="analysis7" onclick="if(event.target===this)closeM(event)">
+<div class="box"><button class="close" onclick="closeM(event)">×</button><div class="k">ANÀLISI FORMAL I COMPOSITIVA</div><h2>El Temerari remolcat a dic sec</h2>
+<p class="long">El gran vaixell blanc domina l’espai i contrasta amb el petit remolcador fosc. L’horitzó és baix i el cel ocupa gran part de la composició. El sol ponent funciona com a centre lluminós i reforça la lectura simbòlica del final d’una època.</p><div class="analysis"><p class="long"><b>Estratègies compositives:</b><br>Horitzó baix · diagonal del remolcador · arc solar · contrast de masses</p></div>
+
+</div></div><div class="modal" id="tech8" onclick="if(event.target===this)closeM(event)">
+<div class="box"><button class="close" onclick="closeM(event)">×</button><div class="k">FITXA TÈCNICA · 1844</div><h2>Pluja, vapor i velocitat</h2>
+<div class="grid">
+<div class="item"><b>Autor</b><br>J. M. W. Turner</div><div class="item"><b>Data</b><br>1844</div>
+<div class="item"><b>Tècnica</b><br>Oli sobre tela</div><div class="item"><b>Dimensions</b><br>91 × 121,8 cm</div>
+<div class="item"><b>Gènere</b><br>Paisatge</div><div class="item"><b>Localització</b><br>National Gallery, Londres</div>
+</div><div class="analysis"><p class="long">El ferrocarril travessa un paisatge dissolt per la pluja, el vapor i la llum. Turner converteix la tecnologia moderna en una experiència gairebé abstracta de velocitat.</p></div></div></div>
+<div class="modal" id="analysis8" onclick="if(event.target===this)closeM(event)">
+<div class="box"><button class="close" onclick="closeM(event)">×</button><div class="k">ANÀLISI FORMAL I COMPOSITIVA</div><h2>Pluja, vapor i velocitat</h2>
+<p class="long">La via crea una perspectiva diagonal molt marcada que convergeix cap al centre. El tren és el focus de tensió i avança cap a l’espectador. Les formes del paisatge es dissolen en una atmosfera de pinzellada lliure, reduint la definició dels contorns.</p><div class="analysis"><p class="long"><b>Estratègies compositives:</b><br>Perspectiva diagonal · punt de fuga · eix del tren · cercle/halo atmosfèric</p></div>
+
+</div></div><div class="modal" id="tech9" onclick="if(event.target===this)closeM(event)">
+<div class="box"><button class="close" onclick="closeM(event)">×</button><div class="k">FITXA TÈCNICA · 1851–1852</div><h2>Ofèlia</h2>
+<div class="grid">
+<div class="item"><b>Autor</b><br>John Everett Millais</div><div class="item"><b>Data</b><br>1851–1852</div>
+<div class="item"><b>Tècnica</b><br>Oli sobre tela</div><div class="item"><b>Dimensions</b><br>76,2 × 111,8 cm</div>
+<div class="item"><b>Gènere</b><br>Pintura literària / paisatge</div><div class="item"><b>Localització</b><br>Tate Britain, Londres</div>
+</div><div class="analysis"><p class="long">Millais representa Ofèlia, personatge de Shakespeare, flotant al riu poc abans de morir. El detall naturalista del paisatge contrasta amb la fragilitat de la figura.</p></div></div></div>
+<div class="modal" id="analysis9" onclick="if(event.target===this)closeM(event)">
+<div class="box"><button class="close" onclick="closeM(event)">×</button><div class="k">ANÀLISI FORMAL I COMPOSITIVA</div><h2>Ofèlia</h2>
+<p class="long">El cos d’Ofèlia crea una gran diagonal horitzontal dins del paisatge. La vegetació forma una mena de marc natural que tanca la composició. L’horitzontalitat de l’aigua estabilitza l’escena mentre el cos i les mans introdueixen la tensió narrativa.</p><div class="analysis"><p class="long"><b>Estratègies compositives:</b><br>Diagonal del cos · horitzontal de l’aigua · marc vegetal · eixos verticals de la vegetació</p></div>
+
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+let i=0;const slides=[...document.querySelectorAll('.slide')];
+function show(n){i=(n+slides.length)%slides.length;slides.forEach((s,j)=>s.classList.toggle('active',j===i));document.getElementById('counter').textContent=(i+1)+' / '+slides.length}
+function next(){show(i+1)}function prev(){show(i-1)}
+function openM(id){document.getElementById(id).classList.add('open')}
+function closeM(e){if(e){e.stopPropagation()}document.querySelectorAll('.modal,.comp').forEach(x=>x.classList.remove('open'))}
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' ')next();if(e.key==='ArrowLeft')prev();if(e.key==='Escape')closeM()});
+
+</script></body></html>
